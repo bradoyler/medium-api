@@ -1,12 +1,6 @@
 {% extends 'layout.swig' %}
 
 {% block content %}
-  <style>
-   .blockDivider {
-     text-align:left;
-   }
-  </style>
-    <div class="blockGroup-list layoutSingleColumn">
       {%  for item in value %}
             <div class="panel panel-default">
                <div class="panel-heading">
@@ -17,5 +11,4 @@
                </div>
              </div>
       {% endfor %}
-    </div>
 {% endblock %}

@@ -3,41 +3,25 @@
 {% block content %}
 {{error}}
 
-<article class="u-minFullHeightControl postArticle is-languageTier1" lang="en" data-allow-notes="true">
-  <section class="postWrapper postWrapper--contain">
-   <div class="postWrapper-inner">
-    <div class="postContent">
-     <div class="postContent-inner">
-      <div class="notesSource">
-       <div class="postField postField--body">
-        <section name="0eb7" class=" section--first">
-         <div class="section-divider layoutSingleColumn">
-          <hr class="section-divider">
-         </div>
-          <div class="section-content">
-            <div class="section-inner layoutSingleColumn">
-              {%  for paragraph in value.content.bodyModel.paragraphs %}
-                 {{ paragraph|element }}
-              {% endfor %}
-           </div>
-          </div>
-        </section>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
+<article>
+    {%  for paragraph in value.content.bodyModel.paragraphs %}
+       {{ paragraph|element }}
+    {% endfor %}
 </article>
-<div class="btn-group">
-  <button type="button" class="btn btn-default">
-    <span class="glyphicon glyphicon-heart"></span>
-  </button>
-  <button type="button" class="btn btn-default">
-     <span class="glyphicon glyphicon-share"></span>
-  </button>
-  <button type="button" class="btn btn-default">
-    <span class="glyphicon glyphicon-comment"></span>
-  </button>
-</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <div class="btn-group">
+      <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-heart"></span>
+      </button>
+      <button type="button" class="btn btn-default">
+         <span class="glyphicon glyphicon-share"></span>
+      </button>
+      <button type="button" class="btn btn-default">
+        <span class="glyphicon glyphicon-comment"></span>
+      </button>
+    </div>
+  </div>
+</nav>
 {% endblock %}

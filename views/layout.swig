@@ -12,7 +12,7 @@
   <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/">LessMedium</a>
+          <a class="navbar-brand" href="/">LesserMedium</a>
         </div>
         <div class=""> <!-- /.navbar-collapse -->
           <ul class="nav navbar-nav">
