@@ -1,7 +1,7 @@
 {% extends 'layout.swig' %}
 
 {% block content %}
-  <h1>Medium content tools</h1>
+  <h1>Medium alt-render</h1>
   <p>Welcome, this is a work in progress</p>
   <hr>
   <h2>API output: </h2>
