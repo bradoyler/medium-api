@@ -5,6 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var swig = require('swig');
+var elementfilter = require('./services/filters/renderelement');
+elementfilter.safe = true;
+swig.setFilter('element', elementfilter);
 
 var routes = require('./routes/index');
 var apiRoutes = require('./routes/api');
