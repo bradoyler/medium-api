@@ -1,17 +1,21 @@
 {% extends 'layout.swig' %}
 
 {% block content %}
-  <h1>Medium alt-render</h1>
-  <p>Welcome, this is a work in progress</p>
-  <hr>
-  <h2>API output: </h2>
-  <p>Give <a href='/api/@bradoyler'>my Medium user page</a> a try</p>
-  <p><a href='/api/@bradoyler/ec63092e3865'>A post on Medium</a></p>
-  <hr>
-  <h2>Rendering demos: </h2>
-  <p><a href='/demo/@bradoyler/ec63092e3865'>A post on Medium </a></p>
-
-  <hr>
-  <h4>Enjoy!</h4>
-
+  <style>
+   .blockDivider {
+     text-align:left;
+   }
+  </style>
+    <div class="blockGroup-list layoutSingleColumn">
+      {%  for item in value %}
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                 <h3 class="panel-title"><a href='/post/{{item.id}}' >{{ item.title }}</a></h3>
+               </div>
+               <div class="panel-body">
+                 <p>{{ item.virtuals.subtitle }}</p>
+               </div>
+             </div>
+      {% endfor %}
+    </div>
 {% endblock %}

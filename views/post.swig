@@ -2,6 +2,7 @@
 
 {% block content %}
 {{error}}
+
 <article class="u-minFullHeightControl postArticle is-languageTier1" lang="en" data-allow-notes="true">
   <section class="postWrapper postWrapper--contain">
    <div class="postWrapper-inner">
@@ -28,4 +29,15 @@
    </div>
   </section>
 </article>
+<div class="btn-group">
+  <button type="button" class="btn btn-default">
+    <span class="glyphicon glyphicon-heart"></span>
+  </button>
+  <button type="button" class="btn btn-default">
+     <span class="glyphicon glyphicon-share"></span>
+  </button>
+  <button type="button" class="btn btn-default">
+    <span class="glyphicon glyphicon-comment"></span>
+  </button>
+</div>
 {% endblock %}

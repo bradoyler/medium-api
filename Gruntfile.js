@@ -54,6 +54,7 @@ module.exports = function (grunt) {
       },
       views: {
         files: ['views/*.swig'],
+        tasks: ['develop', 'delayed-livereload'],
         options: {
           livereload: reloadPort
         }
@@ -79,10 +80,10 @@ module.exports = function (grunt) {
         });
     }, 500);
   });
-  
+
   grunt.registerTask('default', [
     'sass',
-    'develop', 
+    'develop',
     'watch'
   ]);
 };
